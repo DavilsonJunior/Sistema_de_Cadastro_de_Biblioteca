@@ -1,0 +1,193 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+.fundo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image:url('../images/back-to-school.jpg');
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+.login {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 200px;
+	height: auto;
+	padding: 50px;
+	background-color: #495166;
+	border: 1px solid green;
+	box-shadow: 0 0 8px #CCC;
+}
+.login .email {
+	padding: 8px;
+	margin: auto;
+	border: 2px solid #CCC;
+	box-shadow: 0 0 6px #CCC;
+}
+.botao-logar {
+	background-color: rgba(10,23,55,0.5);
+    color: white;
+    margin-top: 20px;
+    padding: 8px;
+    border: 1px solid #CCC;
+	box-shadow: 0 0 15px #333;
+    width: 175px;
+}
+
+/*layout do Index.php*/
+
+.box {
+	display: none;
+	flex-direction: column;
+	width: 650px;
+    box-shadow: -4px -2px 13px 5px #a4a1a18c;
+    background-color: #f1f1f1;
+    padding-left: 30px;
+}
+.box-registro {
+	position: relative;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+.botao-livro {
+	background-color: #007fff;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0px;
+    width: auto;
+}
+.botao-autor {
+	background-color: #4b526c;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0px;
+    width: auto;
+}
+.box-salvar {
+	margin-top: 40px;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.botao-salvar {
+	background-color: #007fff;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0px;
+    width: 80px;
+}
+
+.botao-sair {
+	background-color: #cccccc;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0px;
+    width: 80px;
+}
+
+.titulo-inserir {
+    padding-top: 20px;
+    color: #333333;
+}
+
+.flex{
+	display: flex;
+	padding-left: 10px;
+}
+
+tr.espaco-linha>td {
+  padding-bottom: 10px;
+}
+
+.estilo-input {
+    width: 230px;
+    border: 1px solid #CCC;    
+ }
+
+.estilo-select {
+    border: 1px solid #CCC;
+	width: 220px;
+}
+
+.estilo-number {
+    border: 1px solid #CCC;
+    width: 200px;
+}
+.font{
+	color:#282828;
+	font-size: 18px;
+}
+.ano {
+	padding-right: 10px;
+}
+
+select:required:invalid {
+  color: gray;
+}
+option[value=""][disabled] {
+  display: none;
+}
+option {
+  color: black;
+}
+
+/*Testando*/
+
+.container{
+	width: 1297px;
+	margin: auto;
+	
+}
+.responsive-table{
+
+}
+.menuTabela{
+	font-weight: bold;
+	text-align: center;
+	background-color: #f7f7f7;
+}
+.botaoEditar{
+		width: 100px; 
+		height: 35px;
+    	font-size: 14px;
+    	border-radius: 4px;
+		margin-left: 20px;
+		background-image:url('fundo.jpg');
+		background-repeat: no-repeat;
+		background-size:100%;
+    	border: groove;
+       	color: #666666;
+}
+.botaoExcluir{
+		height: 28px;
+    	font-size: 14px;
+    	border-radius: 4px;
+		margin-left: 18px;
+		margin-right: 20px;
+		background-color: #d9534f;
+	    border: groove;
+       	color: #FFFFFF;
+}
+.celula{
+	background-color: #FFFFFF;
+}
+
+

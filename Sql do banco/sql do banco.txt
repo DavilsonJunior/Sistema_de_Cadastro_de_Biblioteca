@@ -1,0 +1,129 @@
+-- phpMyAdmin SQL Dump
+-- version 4.7.9
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1:3306
+-- Generation Time: 02-Abr-2019 às 20:16
+-- Versão do servidor: 5.7.21
+-- PHP Version: 5.6.35
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `sistema_biblioteca`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `arquivo`
+--
+
+DROP TABLE IF EXISTS `arquivo`;
+CREATE TABLE IF NOT EXISTS `arquivo` (
+  `codigo` int(11) NOT NULL AUTO_INCREMENT,
+  `arquivo` varchar(40) NOT NULL,
+  `data` datetime NOT NULL,
+  PRIMARY KEY (`codigo`)
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `arquivo`
+--
+
+INSERT INTO `arquivo` (`codigo`, `arquivo`, `data`) VALUES
+(10, '36cc45140b547e84baf4423959f5dea8.jpg', '2019-04-02 17:11:55'),
+(11, 'ca9bf2329cc70898c9de9ac539f176eb.jpg', '2019-04-02 17:15:26');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `autor`
+--
+
+DROP TABLE IF EXISTS `autor`;
+CREATE TABLE IF NOT EXISTS `autor` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(100) NOT NULL,
+  `data_nascimento` date NOT NULL,
+  `nacionalidade` varchar(50) NOT NULL,
+  `biografia` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `autor`
+--
+
+INSERT INTO `autor` (`id`, `nome`, `data_nascimento`, `nacionalidade`, `biografia`) VALUES
+(1, 'Davi', '1993-08-04', 'brasileiro', 'teste123'),
+(2, 'Davilson Pai', '2019-04-01', 'Brasileiro', 'O meu pai'),
+(3, 'J.k. Rownling', '2014-08-04', 'Americano', 'Escritora muito famosa, que criou livro de ficção.');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `livros`
+--
+
+DROP TABLE IF EXISTS `livros`;
+CREATE TABLE IF NOT EXISTS `livros` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `titulo` varchar(100) NOT NULL,
+  `titulo_original` varchar(100) NOT NULL,
+  `genero` varchar(100) NOT NULL,
+  `autores` text NOT NULL,
+  `ano_lancamento` date NOT NULL,
+  `editora` varchar(100) NOT NULL,
+  `volume` varchar(50) NOT NULL,
+  `edicao` int(50) NOT NULL,
+  `avaliacao` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `livros`
+--
+
+INSERT INTO `livros` (`id`, `titulo`, `titulo_original`, `genero`, `autores`, `ano_lancamento`, `editora`, `volume`, `edicao`, `avaliacao`) VALUES
+(1, 'titulo', 'titulo original', 'masculino', 'Steve Under', '1993-08-04', 'abril', '4', 8, '2'),
+(10, 'Harry Potter', 'Harry Potter e o Cálice de Fogo', 'Aventura', 'J.K. Rowling', '2019-04-02', 'Moderna', '4', 1, '5'),
+(11, 'Insurgente', 'Divergente', 'Aventura', 'Steve Under', '1995-08-04', 'abril', '2', 5, '3');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `usuarios`
+--
+
+DROP TABLE IF EXISTS `usuarios`;
+CREATE TABLE IF NOT EXISTS `usuarios` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(100) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `senha` varchar(32) NOT NULL,
+  `permissoes` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`, `permissoes`) VALUES
+(1, 'Administrador', 'admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3', 'ADDLIVRO,ADDAUTOR'),
+(5, 'Estoque', 'estoque@gmail.com', '6cfb561ab73cea537cdb793c22c1aa6f', 'ADDLIVRO');
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
