@@ -54,8 +54,6 @@ body {
 }
 .box-registro {
 	position: relative;
-    display: flex;
-    justify-content: flex-start;
     margin-bottom: 10px;
 }
 .botao-livro {
@@ -188,6 +186,14 @@ option {
 }
 .celula{
 	background-color: #FFFFFF;
+}
+
+
+@media (max-width: 680px) and (min-width: 510px) {
+
+	.box {
+		width: 470px;
+	}
 }
 
 

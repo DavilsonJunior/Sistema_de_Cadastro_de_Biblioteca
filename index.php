@@ -107,10 +107,10 @@ $usuarios->setUsuario($_SESSION['logado']);
 
 							<tr class="espaco-linha">
 								<td>
-									<label class="font">Foto de capa:</label>
+									<label id="Lfoto" class="font">Foto de capa:</label>
 								</td>
 								<td>
-									<input type="file" required name="arquivo">
+									<input type="file" id="Ifoto" placeholder="teste" required name="arquivo">
 								</td>
 							</tr>
 
