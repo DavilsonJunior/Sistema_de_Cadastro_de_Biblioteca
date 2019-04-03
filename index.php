@@ -77,7 +77,7 @@ $usuarios->setUsuario($_SESSION['logado']);
 									</label>
 								</td>
 								<td>
-									<select name="autores" class=" form-control estilo-select">
+									<select name="autores" class=" form-control estilo-input estilo-select">
 										<option  value="" disabled selected>Selecione um autor</option>
 										<?php
 										$sql = "SELECT * FROM livros";
@@ -110,7 +110,7 @@ $usuarios->setUsuario($_SESSION['logado']);
 									<label id="Lfoto" class="font">Foto de capa:</label>
 								</td>
 								<td>
-									<input type="file" id="Ifoto" placeholder="teste" required name="arquivo">
+									<input class="estilo-input" type="file" id="Ifoto" placeholder="teste" required name="arquivo">
 								</td>
 							</tr>
 
@@ -119,7 +119,7 @@ $usuarios->setUsuario($_SESSION['logado']);
 									<label class="font">Ano:</label>
 								</td>
 								<td>
-									<input type="date" class="form-control estilo-number" name="ano_lancamento" placeholder="Ano de lançamento" >
+									<input type="date" class="form-control estilo-input estilo-number" name="ano_lancamento" placeholder="Ano de lançamento" >
 								</td>
 							</tr>
 
@@ -128,7 +128,7 @@ $usuarios->setUsuario($_SESSION['logado']);
 									<label class="font">Editora:</label>
 								</td>
 								<td>
-									<input type="text" class="form-control estilo-number" name="editora" placeholder="Informe a Editora" >
+									<input type="text" class="form-control estilo-input estilo-number" name="editora" placeholder="Informe a Editora" >
 								</td>
 							</tr>							
 
@@ -155,7 +155,7 @@ $usuarios->setUsuario($_SESSION['logado']);
 									<label class="font">Avaliação: </label>
 								</td>
 								<td>
-									<select required name="avaliacao" class=" form-control estilo-select">
+									<select required name="avaliacao" class="estilo-input form-control estilo-select">
 				  						<option  value="" disabled selected>Selecione um autor</option>
 				  						<option  value="1">1 estrela</option>
 				  						<option  value="2">2 estrela</option>
@@ -213,7 +213,7 @@ $usuarios->setUsuario($_SESSION['logado']);
 									<label class="font">Biografia: </label>
 								</td>
 								<td>
-									<textarea name="biografia" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Biografia..." name="biografia"></textarea>								
+									<textarea name="biografia" class=" estilo-input form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Biografia..." name="biografia"></textarea>								
 								</td>
 							</tr>		
 

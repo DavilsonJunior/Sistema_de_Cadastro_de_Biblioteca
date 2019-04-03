@@ -194,6 +194,51 @@ option {
 	.box {
 		width: 470px;
 	}
+
+
+}
+
+@media (max-width: 510px) {
+
+	.box {
+		width: 322px;
+	}
+
+	.font{
+	font-size: 14px;
+	}
+
+	.estilo-input {
+    width: 180px;
+    font-size: 14px;
+	}
+
+	.estilo-select {
+	width: 200px;
+	font-size: 14px;
+	}
+
+	.Ifoto {
+		font-size: 14px;
+	}
+
+	.titulo-inserir {
+		font-size:26px;
+	}
+
+
+}
+
+@media (max-width: 378px) {
+	.h1, h1 {
+    font-size: 35px;
+}
+}
+
+@media (max-width: 322px) {
+	.h1, h1 {
+    font-size: 28px;
+}
 }
 
 
