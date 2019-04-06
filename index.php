@@ -83,11 +83,13 @@ $usuarios->setUsuario($_SESSION['logado']);
 										$sql = "SELECT * FROM livros";
 										$sql = $pdo->query($sql);
 
-										if($sql->rowCount() > 0){
+										if($sql->rowCount() > 0) {
+											
 											foreach ($sql->fetchAll()  as $autor):
 												echo '<option  value="'.$autor['autores'].'">'.$autor['autores'].'</option>';
 											endforeach;
 										}
+										
 										?>										
 									</select>
 								</td>
